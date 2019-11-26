@@ -26,24 +26,21 @@
          <!-- Bootstrap CSS -->
          
          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-       <title>Sistema Cadastro - Faculdade</title>
-       <div class="mx-auto">
-       <h1><b>Lista De Cadastros</b></h1>
-       </div>
+       <title>Cadastro - Faculdade</title>
     </head>
     <div class="container-fluid">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Sistema Faculdade</a>
+  <a class="navbar-brand" href="#">Faculdade</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="/alunos/">Lista De Cadastros<span class="sr-only">(Página atual)</span></a>
+        <a class="nav-link" href="/alunos/">Lista de Cadastros<span class="sr-only">(Página atual)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'admin:index' %}">Administração</a>
+        <a class="nav-link" href="{% url 'admin:index' %}">DjangoAdmin</a>
       </li>
     </ul>
   </div>
@@ -51,17 +48,16 @@
     <body>
     <div class="card text-white bg-dark mb-3">
   <div class="card-header">
-    Destaque
+    Aplicação
   </div>
   <div class="card-body">
-    <h5 class="card-title my-2 mx-auto center">Listagem</h5>
-    <p class="card-text">Em uma faculdade, os alunos matriculam-se, mantendo o registro de faltas e a nota final. 
-Cada aluno é identificado pelo nome e pelo seu número de matrícula. Os professores, que possuem nome, endereço, telefone e titulação lecionam as diversas disciplinas.
+    <h5 class="card-title my-2 mx-auto center">Descrição da Prova</h5>
+    <p class="card-text">Em uma faculdade, os alunos matriculam-se em diversas disciplinas em um determinado ano letivo, mantendo o registro de faltas e a nota final. Cada aluno é identificado pelo nome e pelo seu número de matrícula. As disciplinas possuem um código e um título. Os professores, que possuem um número funcional, nome, endereço, telefone e titulação lecionam as diversas disciplinas, em um determinado ano e horário, cumprindo uma carga horária específica.
 </p> 
          <table class="table table-dark">
   <thead>
     <tr>
-      <th scope="col mx-auto">Aluno Cadastrados</th>
+      <th scope="col mx-auto">Alunos</th>
     </tr>
   </thead>
   <tbody>
@@ -71,7 +67,7 @@ Cada aluno é identificado pelo nome e pelo seu número de matrícula. Os profes
       <ul>
           {% for item in alunos_list %}
              <li>
-                <b>Nome:</b> {{ item.nome }} - <b>Matricula:</b> {{ item.matrícula }} - <b>Nascimento:</b> {{ item.nascimento }} - <b> Turma: </b> {{ item.turma}} - <b> Nota </b> {{ item.nota }} - <b> Faltas </b> {{item.faltas}}
+                <b>Nome:     </b>{{ item.nome }} - <b>Matricula:</b> {{ item.matrícula }} - <b>Nascimento:</b> {{ item.nascimento }} - <b> Turma: </b> {{ item.turma}} - <b> Nota </b> {{ item.nota }} - <b> Faltas </b> {{item.faltas}}
              </li>
           {% endfor %}
        </ul>
@@ -82,7 +78,7 @@ Cada aluno é identificado pelo nome e pelo seu número de matrícula. Os profes
   <table class="table table-dark">
   <thead>
     <tr>
-      <th scope="col">Professores Cadastrados</th>
+      <th scope="col">Professores</th>
     </tr>
   </thead>
   <tbody>
@@ -103,7 +99,7 @@ Cada aluno é identificado pelo nome e pelo seu número de matrícula. Os profes
   <table class="table table-dark">
   <thead>
     <tr>
-      <th scope="col mx-md-n5">Turmas Cadastradas</th>
+      <th scope="col mx-md-n5">Disciplinas</th>
     </tr>
   </thead>
   <tbody>

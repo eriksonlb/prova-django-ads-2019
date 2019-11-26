@@ -1,4 +1,4 @@
-#!/home/erikson.bezerra/Projects/FatecProjects/4-semestre-prova-django/venv/bin/python3
+#!/home/erikson.bezerra/Projects/FatecProjects/prova-django-ads-2019/venv/bin/python3
 from django.core import management
 
 if __name__ == "__main__":

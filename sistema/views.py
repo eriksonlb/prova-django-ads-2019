@@ -1,13 +1,13 @@
 from django.shortcuts import render
-from .models import Turma, Aluno, Professor
+from .models import Disciplina, Aluno, Professor
 
 def alunos_list(request):
     alunos = Aluno.objects.all()
-    turmas = Turma.objects.all()
+    disciplinas = Disciplina.objects.all()
     professores = Professor.objects.all()
     context = {
        'alunos_list': alunos,
-       'turmas_list': turmas,
+       'turmas_list': disciplinas,
        'professores_list': professores
 
     }
