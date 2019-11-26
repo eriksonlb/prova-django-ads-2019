@@ -1,0 +1,20 @@
+body {
+    background: url('https://wallpapers-fenix.eu/full/141216/223104925.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+  }
+
+h1 {
+    font-family: 'Lobster', cursive;;
+    color: rgb(141, 115, 243);
+    font-size: 37pt;
+    text-decoration: navajowhite;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+}
