@@ -1,15 +1,19 @@
 from django.contrib import admin
-from .models import Disciplina, Aluno, Professor
+from .models import Disciplina, Aluno, Professor, Matricula
 
 @admin.register(Disciplina)
-class registro_ponto_admin(admin.ModelAdmin):
-    list_display = ['nome', 'data_criacao']
+class disciplina_admin(admin.ModelAdmin):
+    list_display = ['id', 'nome', 'data_criacao']
     
 
 @admin.register(Aluno)
-class registro_ponto_admin(admin.ModelAdmin):
+class aluno_admin(admin.ModelAdmin):
     list_display = ['nome', 'matrícula', 'nota', 'faltas']
 
 @admin.register(Professor)
-class registro_ponto_admin(admin.ModelAdmin):
+class professor_admin(admin.ModelAdmin):
     list_display = ['nome', 'titulacao','endereço', 'telefone']
+
+@admin.register(Matricula)
+class professor_admin(admin.ModelAdmin):
+    list_display = ['aluno']
