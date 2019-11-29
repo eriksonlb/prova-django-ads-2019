@@ -16,7 +16,7 @@ class professor_admin(admin.ModelAdmin):
 
 @admin.register(Matricula)
 class professor_admin(admin.ModelAdmin):
-    list_display = ['aluno']
+    list_display = ['aluno', 'disciplina', 'nota', 'faltas', 'ano']
 @admin.register(Alocacao)
 class professor_admin(admin.ModelAdmin):
     list_display = ['codigo', 'professor', 'disciplina', 'ano', 'carga', 'horario']
